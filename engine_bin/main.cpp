@@ -14,8 +14,6 @@ int main(void) {
 
 		BeginDrawing();
 
-		ClearBackground(WHITE);
-
 		DrawText("hello world", 100, 100, 20, BLACK);
 
 		EndDrawing();

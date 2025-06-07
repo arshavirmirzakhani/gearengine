@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 project(gear_engine)
 
-file(GLOB_RECURSE SOURCES_ENGINE "${CMAKE_CURRENT_SOURCE_DIR}/engine_bin/*.cpp" "${PROJECT_SOURCE_DIR}/vendor/Jolt/*.cpp")
+file(GLOB_RECURSE SOURCES_ENGINE "${CMAKE_CURRENT_SOURCE_DIR}/engine_bin/*.cpp")
 
 set(COMMON_INCLUDES
     ${PROJECT_SOURCE_DIR}/engine_core
@@ -19,6 +19,7 @@ target_include_directories(gear_engine PRIVATE ${COMMON_INCLUDES})
 
 add_subdirectory(vendor/raylib)
 add_subdirectory(vendor/lua)
+add_subdirectory(vendor/box2d)
 
 target_link_libraries(gear_engine PRIVATE raylib lua_static)
 
