@@ -1,6 +1,8 @@
 #include <box2d/box2d.h>
 #include <raylib.h>
 
+#include <game.h>
+
 // Constants
 const int screenWidth  = 800;
 const int screenHeight = 450;
