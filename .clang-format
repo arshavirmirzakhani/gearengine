@@ -5,5 +5,7 @@ UseTab: Always
 BreakBeforeBraces: Attach
 PointerAlignment: Left
 AlignConsecutiveAssignments: true
-AllowShortIfStatementsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: true
 ColumnLimit: 160
+AccessModifierOffset: 0
+IndentAccessModifiers: true

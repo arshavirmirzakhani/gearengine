@@ -11,6 +11,8 @@ set(COMMON_INCLUDES
     ${PROJECT_SOURCE_DIR}/vendor/lua/lua-5.4.7/include
     ${PROJECT_SOURCE_DIR}/vendor/raylib/src
     ${PROJECT_SOURCE_DIR}/vendor/
+    ${PROJECT_SOURCE_DIR}/vendor/box2d/include
+    ${PROJECT_SOURCE_DIR}/engine_core
 )
 
 
@@ -21,5 +23,5 @@ add_subdirectory(vendor/raylib)
 add_subdirectory(vendor/lua)
 add_subdirectory(vendor/box2d)
 
-target_link_libraries(gear_engine PRIVATE raylib lua_static)
+target_link_libraries(gear_engine PRIVATE raylib lua_static box2d)
 
