@@ -34,5 +34,6 @@
 /build
 /.vscode
 /test
+imgui.ini
 
 data.gear
