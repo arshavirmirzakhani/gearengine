@@ -12,4 +12,6 @@ class Object {
 
 		Object() {};
 		~Object() {};
+
+		void process() {};
 };
