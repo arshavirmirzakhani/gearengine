@@ -5,14 +5,16 @@
 class Game {
 	private:
 	public:
-		// game name , used for window title
+		// game name , also used for default window title
 		std::string name;
+
+		int window_width  = 0;
+		int window_height = 0;
 
 		// <scene name - scene object>
 		std::map<std::string, Scene> scenes;
+		std::string current_scene;
 
-		std::string current_scene_name;
-
-		Game();
-		~Game();
+		Game() {};
+		~Game() {};
 };

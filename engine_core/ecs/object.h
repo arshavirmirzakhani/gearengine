@@ -1,9 +1,15 @@
 #pragma once
 
+#include "objectType.h"
 class Object {
 	private:
-		/* data */
 	public:
-		Object(/* args */);
-		~Object();
+		int x = 0, y = 0;
+
+		ObjectType* type;
+
+		std::map<std::string, Object> child_objects;
+
+		Object() {};
+		~Object() {};
 };

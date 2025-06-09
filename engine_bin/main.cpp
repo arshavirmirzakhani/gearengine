@@ -3,14 +3,21 @@
 
 #include <game.h>
 
-// Constants
-const int screenWidth  = 800;
-const int screenHeight = 450;
-const float PPM	       = 100.0f; // Pixels per meter
-
 int main(void) {
+
+	// Initialize game
+
+	Game game;
+
+	game_object = &game;
+
+	game.name = "test";
+
+	game.window_height = 600;
+	game.window_width  = 800;
+
 	// Initialize window
-	InitWindow(screenWidth, screenHeight, "test");
+	InitWindow(game.window_width, game.window_height, game.name.c_str());
 	SetTargetFPS(60);
 
 	// Main game loop
@@ -18,8 +25,6 @@ int main(void) {
 
 		BeginDrawing();
 		ClearBackground(RAYWHITE);
-
-		DrawText("hello world", 10, 10, 20, BLACK);
 
 		EndDrawing();
 	}
