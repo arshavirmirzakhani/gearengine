@@ -17,12 +17,26 @@ int main(void) {
 	game.window_height = 600;
 	game.window_width  = 800;
 
+	Object object;
+
+	object.script = "function main() print('print') end";
+
+	Scene scene;
+
+	scene.objects["object"] = &object;
+
+	game.current_scene	 = "testscene";
+	game.scenes["testscene"] = scene;
+
 	// Initialize window
 	SetTraceLogLevel(LOG_WARNING);
 	InitWindow(game.window_width, game.window_height, game.name.c_str());
 	SetTargetFPS(60);
 
 	// Main game loop
+
+	game.init();
+
 	while (!WindowShouldClose()) {
 
 		game.process();

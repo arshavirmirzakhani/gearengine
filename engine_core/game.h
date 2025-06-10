@@ -24,11 +24,6 @@ class Game {
 		Game() {};
 		~Game() {};
 
-		void process();
+		void init() { scenes[current_scene].init(); }
+		void process() { scenes[current_scene].process(); }
 };
-
-void Game::process() {
-	for (auto object : scenes[current_scene].objects) {
-		object.second.process();
-	}
-}
