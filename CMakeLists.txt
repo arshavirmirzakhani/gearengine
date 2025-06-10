@@ -5,23 +5,27 @@ set(CMAKE_CXX_STANDARD 17)
 project(gear_engine)
 project(gear_engine_editor)
 
+
 file(GLOB_RECURSE SOURCES_ENGINE ${CMAKE_CURRENT_SOURCE_DIR}/engine_bin/*.cpp)
 file(GLOB_RECURSE SOURCES_ENGINE_EDITOR ${CMAKE_CURRENT_SOURCE_DIR}/engine_editor/*.cpp)
 
 set(COMMON_INCLUDES
-    ${PROJECT_SOURCE_DIR}/engine_core
-    ${PROJECT_SOURCE_DIR}/vendor/lua/lua-5.4.7/include
-    ${PROJECT_SOURCE_DIR}/vendor/raylib/src
-    ${PROJECT_SOURCE_DIR}/vendor/
-    ${PROJECT_SOURCE_DIR}/vendor/box2d/include
-    ${PROJECT_SOURCE_DIR}/engine_core
+${PROJECT_SOURCE_DIR}/engine_core
+${PROJECT_SOURCE_DIR}/vendor/lua/lua-5.4.7/include
+${PROJECT_SOURCE_DIR}/vendor/raylib/src
+${PROJECT_SOURCE_DIR}/vendor/
+${PROJECT_SOURCE_DIR}/vendor/box2d/include
+${PROJECT_SOURCE_DIR}/engine_core
 )
 
 
 add_executable(gear_engine ${SOURCES_ENGINE})
 add_executable(gear_engine_editor ${SOURCES_ENGINE_EDITOR}
-    ${PROJECT_SOURCE_DIR}/engine_editor/imgui/
+${PROJECT_SOURCE_DIR}/engine_editor/imgui/
 )
+
+target_compile_definitions(gear_engine PRIVATE _GLIBCXX_USE_CXX11_ABI=0)
+target_compile_definitions(gear_engine_editor PRIVATE _GLIBCXX_USE_CXX11_ABI=0)
 
 target_include_directories(gear_engine PRIVATE ${COMMON_INCLUDES})
 target_include_directories(gear_engine_editor PRIVATE ${COMMON_INCLUDES}
