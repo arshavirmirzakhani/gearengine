@@ -21,7 +21,7 @@ ${PROJECT_SOURCE_DIR}/engine_core
 
 add_executable(gear_engine ${SOURCES_ENGINE})
 add_executable(gear_engine_editor ${SOURCES_ENGINE_EDITOR}
-${PROJECT_SOURCE_DIR}/engine_editor/imgui/
+${PROJECT_SOURCE_DIR}/engine_editor/imgui
 )
 
 target_compile_definitions(gear_engine PRIVATE _GLIBCXX_USE_CXX11_ABI=0)
@@ -38,3 +38,5 @@ add_subdirectory(vendor/box2d)
 
 target_link_libraries(gear_engine PRIVATE raylib lua_static box2d)
 target_link_libraries(gear_engine_editor PRIVATE raylib lua_static box2d)
+
+add_compile_options(-Wall -Wextra -Werror)

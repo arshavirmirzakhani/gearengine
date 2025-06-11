@@ -1,8 +1,8 @@
 #include <box2d/box2d.h>
+#include <game.h>
 #include <raylib.h>
 #include <zip_file.hpp>
 
-#include <game.h>
 
 int main(void) {
 
