@@ -1,13 +1,10 @@
 #include <box2d/box2d.h>
 #include <game.h>
 #include <raylib.h>
-#include <zip_file.hpp>
-
 
 int main(void) {
 
 	// Load game data
-	miniz_cpp::zip_file data("data.gear");
 
 	// Initialize game
 	Game game;

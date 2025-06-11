@@ -1,4 +1,5 @@
 #pragma once
+#include "gearformat.h"
 #include "globals.h"
 #include "scene.h"
 

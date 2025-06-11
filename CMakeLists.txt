@@ -10,11 +10,11 @@ file(GLOB_RECURSE SOURCES_ENGINE ${CMAKE_CURRENT_SOURCE_DIR}/engine_bin/*.cpp)
 file(GLOB_RECURSE SOURCES_ENGINE_EDITOR ${CMAKE_CURRENT_SOURCE_DIR}/engine_editor/*.cpp)
 
 set(COMMON_INCLUDES
-${PROJECT_SOURCE_DIR}/engine_core
+${PROJECT_SOURCE_DIR}/vendor/
 ${PROJECT_SOURCE_DIR}/vendor/lua/lua-5.4.7/include
 ${PROJECT_SOURCE_DIR}/vendor/raylib/src
-${PROJECT_SOURCE_DIR}/vendor/
 ${PROJECT_SOURCE_DIR}/vendor/box2d/include
+${PROJECT_SOURCE_DIR}/vendor/cereal/include
 ${PROJECT_SOURCE_DIR}/engine_core
 )
 
@@ -36,7 +36,7 @@ add_subdirectory(vendor/raylib)
 add_subdirectory(vendor/lua)
 add_subdirectory(vendor/box2d)
 
-target_link_libraries(gear_engine PRIVATE raylib lua_static box2d)
-target_link_libraries(gear_engine_editor PRIVATE raylib lua_static box2d)
+target_link_libraries(gear_engine PRIVATE raylib lua_static box2d )
+target_link_libraries(gear_engine_editor PRIVATE raylib lua_static box2d )
 
 add_compile_options(-Wall -Wextra -Werror)
