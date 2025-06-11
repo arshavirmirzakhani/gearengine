@@ -15,8 +15,8 @@ class Game {
 		int window_width  = 0;
 		int window_height = 0;
 
-		// game assets <assets name - asset path>
-		std::map<std::string, std::string> assets;
+		// game assets <assets path - asset data>
+		std::map<std::string, std::vector<char>> assets;
 
 		// <scene name - scene object>
 		std::map<std::string, Scene> scenes;
