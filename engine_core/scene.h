@@ -10,6 +10,14 @@ class Scene {
 		Scene() {};
 		~Scene() {};
 
-		void init() {};
-		void process() {};
+		void init() {
+			for (auto object : objects) {
+				object.second->init();
+			}
+		};
+		void process() {
+			for (auto object : objects) {
+				object.second->process();
+			}
+		};
 };

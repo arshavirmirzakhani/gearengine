@@ -31,10 +31,20 @@ int main(int argc, char* argv[]) {
 
 		ImGui::Begin("Main Window", nullptr, mainWindowFlags);
 
+		// Menu bar
+
+		ImGui::BeginChild("Project", ImVec2(0, 30));
+
+		ImGui::Button("Open");
+		ImGui::SameLine();
+		ImGui::Button("New");
+
+		ImGui::EndChild();
+
 		// Left Panel Child
 		ImGui::BeginChild("Left Panel", ImVec2(250, 0), true);
 		ImGui::Text("This is the left panel.");
-		if (ImGui::Button("Button 1")) {
+		if (ImGui::Button("")) {
 		}
 		if (ImGui::Button("Button 2")) {
 		}
